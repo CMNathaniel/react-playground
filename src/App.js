@@ -1,28 +1,22 @@
-import React from "react";
-import Split from "./composition/Split";
-//import Tooltip from "./composition/Tooltip";
+import React, { Component } from "react";
+import "./App.css";
+import HelloWorld from "./state-drills/HelloWorld.js";
+import Bomb from "./state-drills/Bomb.js";
+import RouletteGun from "./state-drills/RouletteGun.js";
 
-/*const firstTooltip = <Tooltip message="tooltip message">ipsum</Tooltip>;
-const secondTooltip = (
-  <Tooltip message="another tooltip message">officiis</Tooltip>
-);*/
-
-function App() {
-  const first = "Christine";
-  return (
-    <main className="App">
-      <Split className="left" flexBasis="2">
-        Hello {first}, This is the content for the left `Split`. Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit
-        facere officia?
-      </Split>
-      <Split className="right">
-        This is the content for the right `Split`. Inventore aliquid cupiditate
-        suscipit repellat. Quaerat quis officiis quam fuga. Aliquid quo possimus
-        id soluta aspernatur.
-      </Split>
-    </main>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h2>Hello World Component</h2>
+        <HelloWorld />
+        <h2>Bomb Component</h2>
+        <Bomb />
+        <h2>Roulette Gun</h2>
+        <RouletteGun bulletInChamber={6} />
+      </div>
+    );
+  }
 }
 
 export default App;
